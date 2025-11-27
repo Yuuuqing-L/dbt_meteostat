@@ -1,4 +1,4 @@
- ```yml
+
     version: 2
     sources:
     
@@ -14,4 +14,4 @@
         - name: flights
         - name: airports
         - name: regions
-    ```
+    
