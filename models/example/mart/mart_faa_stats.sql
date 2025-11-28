@@ -21,7 +21,6 @@ WITH flights_union AS (
         airline
     FROM {{ ref('prep_flights') }}
 ),
-
 agg AS (
     SELECT
         airport_code,
@@ -42,7 +41,6 @@ agg AS (
     FROM flights_union
     GROUP BY airport_code
 )
-
 SELECT
     a.airport_code,
     ap.name,
