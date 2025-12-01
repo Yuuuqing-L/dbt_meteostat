@@ -14,9 +14,8 @@ CASE
 	sum(
 CASE 
 	WHEN diverted = 1 THEN 1 ELSE 0 END ) AS diverted
-FROM
-	prep_flights pf
-LEFT JOIN prep_airports pa
+FROM {{ ref('prep_flights') }} pf
+LEFT JOIN {{ ref('prep_airports') }} pa
 ON
 	pf.origin = pa.faa
 GROUP BY
