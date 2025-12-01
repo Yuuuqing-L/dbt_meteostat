@@ -58,4 +58,4 @@ SELECT
 FROM agg a
 LEFT JOIN {{ ref('prep_airports') }} ap
     ON a.airport_code = ap.faa
-ORDER BY airport_code;
+ORDER BY airport_code
